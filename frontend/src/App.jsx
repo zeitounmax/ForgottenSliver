@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 
-const Layout = () => {
+function Layout() {
   return (
     <>
       <Navbar />
@@ -17,7 +17,7 @@ const Layout = () => {
       <Footer />
     </>
   );
-};
+}
 
 const router = createBrowserRouter([
   {
