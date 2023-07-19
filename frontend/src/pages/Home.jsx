@@ -1,5 +1,4 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 
 export default function Home() {
   return (
