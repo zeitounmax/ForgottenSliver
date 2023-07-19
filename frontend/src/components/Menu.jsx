@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../style.scss";
 
-function Home() {
+function Menu() {
   const posts = [
     {
       id: 1,
@@ -29,27 +27,19 @@ function Home() {
       img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
   ];
-
   return (
-    <div className="home">
-      <div className="posts">
-        {posts.map((post) => (
-          <div className="post" key={post.id}>
-            <div className="img">
-              <img src={post.img} alt="" />
-            </div>
-            <div className="content">
-              <Link className="link" to={`/post/${post.id}`}>
-                <h1>{post.title}</h1>
-                <p>{post.desc}</p>
-                <button type="button">Lire en plus</button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="menu">
+      <h1>D'autres articles à voir </h1>
+
+      {posts.map((post) => (
+        <div className="post" key={post.id}>
+          <img src={post.img} alt="" />
+          <h2>{post.title}</h2>
+          <button type="submit">Lire en plus</button>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default Home;
+export default Menu;
