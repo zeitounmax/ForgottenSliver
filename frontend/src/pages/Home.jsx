@@ -1,51 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../style.scss";
 
 function Home() {
-  const posts = [
-    {
-      id: 1,
-      title: "Lorem Ipsum",
-      desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-      img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      id: 2,
-      title: "Lorem Ipsum",
-      desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-      img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      id: 3,
-      title: "Lorem Ipsum",
-      desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-      img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      id: 4,
-      title: "Lorem Ipsum",
-      desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-      img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-  ];
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPostsFromServer = () => {
+      fetch("http://localhost:8000/post/")
+        .then((response) => response.json())
+        .then((data) => {
+          setPosts(data);
+        })
+        .catch((error) => {
+          console.error("Erreur lors de la récupération des articles:", error);
+        });
+    };
+
+    fetchPostsFromServer();
+  }, []);
 
   return (
     <div className="home">
       <div className="posts">
         {posts.map((post) => (
-          <div className="post" key={post.id}>
+          <article className="post" key={post.id}>
             <div className="img">
-              <img src={post.img} alt="" />
+              <img src={post.image} alt={post.description} />
             </div>
             <div className="content">
-              <Link className="link" to={`/post/${post.id}`}>
-                <h1>{post.title}</h1>
-                <p>{post.desc}</p>
-                <button type="button">Lire en plus</button>
+              <h1>{post.title}</h1>
+              <p>{post.description}</p>
+              <Link className="button" to={`/post/${post.id}`}>
+                Lire en plus
               </Link>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>
