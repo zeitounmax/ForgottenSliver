@@ -1,13 +1,16 @@
 $lightGreen: #b9e7e7;
 
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 .app {
+  font-family: "Poppins";
   display: flex;
   justify-content: center;
   width: 100%;
+  background-image: url("/home/max/Documents/Coding/Forgotten sliver/ForgottenSliver/frontend/src/img/fond.jpg");
 
   .container {
     width: 100%;
-    background-image: url("/home/max/Documents/Coding/Forgotten sliver/ForgottenSliver/frontend/src/img/fond.jpg");
 
     .link {
       text-decoration: none;
@@ -71,6 +74,7 @@ $lightGreen: #b9e7e7;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: #000000;
         .logo {
           img {
             width: 250px;
@@ -82,7 +86,7 @@ $lightGreen: #b9e7e7;
           gap: 10px;
 
           h6 {
-            font-size: 25px;
+            font-size: 14px;
             font-weight: 300;
             color: white;
           }
@@ -176,12 +180,12 @@ $lightGreen: #b9e7e7;
             justify-content: space-between;
 
             h1 {
-              font-size: 48px;
+              font-size: 22px;
               color: rgb(0, 0, 0);
             }
 
             p {
-              font-size: 28px;
+              font-size: 18px;
             }
 
             .button {
