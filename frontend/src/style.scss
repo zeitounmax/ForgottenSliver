@@ -3,6 +3,7 @@ $lightGreen: #b9e7e7;
 .app {
   display: flex;
   justify-content: center;
+
   .container {
     width: 1024px;
 
@@ -22,7 +23,7 @@ $lightGreen: #b9e7e7;
 
       h1 {
         font-size: 20px;
-        color: teal;
+        color: rgb(255, 255, 255);
         margin-bottom: 20px;
       }
 
@@ -43,7 +44,7 @@ $lightGreen: #b9e7e7;
         button {
           padding: 10px;
           border: none;
-          background-color: teal;
+          background-color: rgb(208, 198, 14);
           cursor: pointer;
           color: white;
         }
@@ -101,9 +102,9 @@ $lightGreen: #b9e7e7;
             border: 1px solid white;
 
             &:hover {
-              color: teal;
+              color: rgb(196, 142, 15);
               background-color: white;
-              border: 1px solid teal;
+              border: 1px solid rgb(182, 138, 3);
             }
           }
         }
@@ -111,7 +112,6 @@ $lightGreen: #b9e7e7;
     }
 
     //FOOTER
-
     footer {
       margin-top: 100px;
       padding: 20px;
@@ -121,6 +121,8 @@ $lightGreen: #b9e7e7;
       align-items: center;
       justify-content: space-between;
       font-size: 12px;
+      flex-direction: row; /* Ajouter cette ligne pour aligner horizontalement */
+
       img {
         height: 50px;
       }
@@ -185,7 +187,7 @@ $lightGreen: #b9e7e7;
               border: none;
               background-color: rgb(244, 142, 8);
               border: 1px solid rgb(128, 43, 0);
-              color: teal;
+              color: rgb(255, 255, 255);
 
               &:hover {
                 border: 1px solid white;

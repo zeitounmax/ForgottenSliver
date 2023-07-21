@@ -7,9 +7,15 @@ class PostManager extends AbstractManager {
 
   insert(post) {
     return this.database.query(
-      `insert into ${this.table} (title, description, image) values (?, ?, ?)`,
+      `INSERT INTO ${this.table} (title, description, image) VALUES (?, ?, ?)`,
       [post.title, post.description, post.image]
     );
+  }
+
+  delete(post) {
+    return this.database.query(`DELETE FROM ${this.table} WHERE id = ?`, [
+      post.id,
+    ]);
   }
 }
 

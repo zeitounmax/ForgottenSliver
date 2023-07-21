@@ -31,7 +31,6 @@ function Write() {
   };
 
   const updateProject = () => {
-    // Envoyer une requête PUT pour mettre à jour le projet
     fetch("/posts/1", {
       method: "PUT",
       headers: {
@@ -42,9 +41,33 @@ function Write() {
       .then((response) => response.json())
       .then((data) => {
         console.info(data);
+        alert("Modification réussi");
       })
       .catch((error) => {
         console.error(error);
+      });
+  };
+
+  const deleteProject = () => {
+    fetch("http://localhost:8000/", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title,
+        description: value,
+        image: "https://picsum.photos/200/300",
+      }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Suppresion réussi");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        // Traiter l'erreur ici si nécessaire
       });
   };
 
@@ -85,6 +108,9 @@ function Write() {
             </button>
             <button type="button" onClick={updateProject}>
               Mettre à jour
+            </button>
+            <button type="button" onClick={deleteProject}>
+              Supprimer
             </button>
           </div>
         </div>
