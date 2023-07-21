@@ -54,7 +54,7 @@ function Write() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title: "Nouveau titre", description: value }),
+      body: JSON.stringify({ title: value, description: value }),
     })
       .then((response) => {
         if (response.ok) {

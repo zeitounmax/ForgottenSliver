@@ -18,8 +18,6 @@ function Navbar() {
           <Link className="link" to="/?cat=dossier">
             <h6>Dossiers</h6>
           </Link>
-          <span>ZeitounMax</span>
-          <span>Déconnexion</span>
           <span className="write">
             <Link className="link" to="/write">
               Ecrire

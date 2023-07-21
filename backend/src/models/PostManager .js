@@ -14,7 +14,9 @@ class PostManager extends AbstractManager {
 
   delete(post) {
     return this.database.query(`DELETE FROM ${this.table} VALUES id = ?`, [
-      post.id,
+      post.title,
+      post.description,
+      post.image,
     ]);
   }
 }
