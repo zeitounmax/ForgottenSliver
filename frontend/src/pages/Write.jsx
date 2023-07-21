@@ -31,7 +31,7 @@ function Write() {
   };
 
   const updateProject = () => {
-    fetch("/posts/1", {
+    fetch("http://localhost:8000/", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -54,11 +54,7 @@ function Write() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        title,
-        description: value,
-        image: "https://picsum.photos/200/300",
-      }),
+      body: JSON.stringify({ title: "Nouveau titre", description: value }),
     })
       .then((response) => {
         if (response.ok) {

@@ -21,4 +21,4 @@ CREATE TABLE post (
 
 INSERT INTO post (title, description, image) VALUES ('New Title', 'New Description', 'new_image.jpg');
 UPDATE post SET title = 'Updated Title', description = 'Updated Description' WHERE id = 1;
-DELETE FROM post  WHERE id = 3;
+DELETE FROM post  WHERE id = 1;

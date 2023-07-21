@@ -3,9 +3,11 @@ $lightGreen: #b9e7e7;
 .app {
   display: flex;
   justify-content: center;
+  width: 100%;
 
   .container {
-    width: 1024px;
+    width: 100%;
+    background-image: url("/home/max/Documents/Coding/Forgotten sliver/ForgottenSliver/frontend/src/img/fond.jpg");
 
     .link {
       text-decoration: none;
@@ -19,11 +21,11 @@ $lightGreen: #b9e7e7;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: $lightGreen;
+      background-image: url("/home/max/Documents/Coding/Forgotten sliver/ForgottenSliver/frontend/src/img/fond.jpg");
 
       h1 {
         font-size: 20px;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         margin-bottom: 20px;
       }
 
@@ -31,7 +33,6 @@ $lightGreen: #b9e7e7;
         display: flex;
         flex-direction: column;
         padding: 50px;
-        background-color: white;
         width: 200px;
         gap: 20px;
 
@@ -81,8 +82,9 @@ $lightGreen: #b9e7e7;
           gap: 10px;
 
           h6 {
-            font-size: 16px;
+            font-size: 25px;
             font-weight: 300;
+            color: white;
           }
 
           span {
@@ -175,10 +177,11 @@ $lightGreen: #b9e7e7;
 
             h1 {
               font-size: 48px;
+              color: rgb(0, 0, 0);
             }
 
             p {
-              font-size: 18px;
+              font-size: 28px;
             }
 
             .button {
@@ -204,7 +207,7 @@ $lightGreen: #b9e7e7;
 
     .single {
       display: flex;
-      gap: 50px;
+      gap: 20px;
 
       .content {
         flex: 5;
@@ -248,7 +251,7 @@ $lightGreen: #b9e7e7;
 
         h1 {
           font-size: 42px;
-          color: #333;
+          color: #ffffff;
         }
 
         p {
@@ -316,13 +319,13 @@ $lightGreen: #b9e7e7;
 
         input {
           padding: 10px;
-          border: 1px solid lightgray;
+          border: 1px solid rgb(0, 0, 0);
         }
 
         .editorContainer {
-          height: 300px;
+          height: 100%;
           overflow: scroll;
-          border: 1px solid lightgray;
+          border: 1px solid rgb(0, 0, 0);
 
           .editor {
             height: 100%;
@@ -338,14 +341,14 @@ $lightGreen: #b9e7e7;
         gap: 20px;
 
         .item {
-          border: 1px solid lightgray;
+          border: 1px solid rgb(0, 0, 0);
           padding: 10px;
           flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          font-size: 12px;
-          color: #555;
+          font-size: 25px;
+          color: #000000;
 
           h1 {
             font-size: 20px;
@@ -354,6 +357,7 @@ $lightGreen: #b9e7e7;
           .file {
             text-decoration: underline;
             cursor: pointer;
+            color: rgb(0, 0, 0);
           }
 
           .buttons {
