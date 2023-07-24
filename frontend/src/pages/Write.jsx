@@ -26,7 +26,6 @@ function Write() {
       })
       .catch((error) => {
         console.error(error);
-        // Traiter l'erreur ici si nécessaire
       });
   };
 
