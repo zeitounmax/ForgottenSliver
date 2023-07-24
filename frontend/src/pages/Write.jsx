@@ -31,7 +31,7 @@ function Write() {
   };
 
   const updateProject = () => {
-    fetch("http://localhost:8000/", {
+    fetch("http://localhost:8000/post", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -82,6 +82,7 @@ function Write() {
             theme="snow"
             value={value}
             onChange={setValue}
+            placeholder="Tapez votre texte"
           />
         </div>
       </div>
