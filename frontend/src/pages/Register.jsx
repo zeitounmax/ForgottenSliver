@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 function Register() {
   const [inputs, setInputs] = useState({
@@ -30,12 +31,15 @@ function Register() {
   };
   return (
     <div className="auth">
+      <Link to="/">
+        <img src={logo} className="logo" alt="logo" />
+      </Link>
       <h1>S'inscrire</h1>
       <form>
         <input
           required
           type="text"
-          placeholder="username"
+          placeholder="Pseudonyme"
           name="username"
           onChange={handleChange}
         />
@@ -49,7 +53,7 @@ function Register() {
         <input
           required
           type="password"
-          placeholder="password"
+          placeholder="Mot de passe"
           name="password"
           onChange={handleChange}
         />

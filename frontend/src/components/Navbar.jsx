@@ -18,6 +18,13 @@ function Navbar() {
           <Link className="link" to="/?cat=dossier">
             <h6>Dossiers</h6>
           </Link>
+
+          <Link className="link" to="/login">
+            <h6>Connexion</h6>
+          </Link>
+          <Link className="link" to="/register">
+            <h6>Enregistrement</h6>
+          </Link>
           <span className="write">
             <Link className="link" to="/write">
               Ecrire

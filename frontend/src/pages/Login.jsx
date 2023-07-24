@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 function Login() {
   return (
     <div className="auth">
-      <h1>Login</h1>
+      <Link to="/">
+        <img src={logo} className="logo" alt="logo" />
+      </Link>
+      <h1>Connexion</h1>
+      <logo />
       <form>
-        <input required type="text" placeholder="username" />
-        <input required type="password" placeholder="password" />
+        <input required type="text" placeholder="Pseudonyme" />
+        <input required type="password" placeholder="Mot de passe" />
         <button type="submit">Valider</button>
         <p>Une erreur est survenu</p>
         <span>

@@ -32,7 +32,10 @@ function Single() {
           </div>
         </div>
         <h1>Bonjour Ceci est un texte</h1>
-        <p>Il est beau le texte.</p>
+        <p>
+          Il est beau le texte.Sinon ça va c'est la dernière semaine et je suis
+          assez confiant pour la suite
+        </p>
       </div>
       <Menu />
     </div>

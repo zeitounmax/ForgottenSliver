@@ -6,7 +6,7 @@ function Footer() {
     <footer>
       <img src={Logo} alt="" />
       <span>
-        Fabriqué avec ♥️ sur <b>React.js</b>.
+        Propulsé avec ♥️ sur <b>React.js</b>.
       </span>
     </footer>
   );
