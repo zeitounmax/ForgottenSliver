@@ -14,10 +14,7 @@ function Single() {
           alt=""
         />
         <div className="user">
-          <img
-            src="https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt=""
-          />
+          <img src="https://pbs.twimg.com/media/EyU5_QVU4AAB1x0.jpg" alt="" />
           <div className="info">
             <span>ZeitounMax</span>
             <p>Posté il y a deux jours</p>

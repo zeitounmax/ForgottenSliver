@@ -49,7 +49,7 @@ function Write() {
   };
 
   const deleteProject = () => {
-    fetch("http://localhost:8000/", {
+    fetch("http://localhost:8000/post/:id", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ function Write() {
     })
       .then((response) => {
         if (response.ok) {
-          alert("Suppresion réussi");
+          alert("Suppresion réussie");
         }
       })
       .catch((error) => {
